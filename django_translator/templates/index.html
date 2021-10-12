@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+        <h1>Uzb-Eng</h1>
+   <form action="#">{% csrf_token %}
+       <div id="container">
+        <input type="text" name="q" id="user" placeholder="so'zni kiriting">
+        <div class="button">
+            <button type="submit">
+                submit
+            </button>
+        </div>
+       </div>
+   </form>
+   <div id="ppp">
+   <table>
+       <tr>
+           <th>
+               uz
+           </th>
+           <th>
+            eng
+           </th>
+       </tr>
+       <tr>
+           <td>
+            {{trans.0.text}}
+           </td>
+           <td>
+            {{trans.1.text}}
+           </td>
+       </tr>
+   </table>
+</div>
+</body>
+</html>
